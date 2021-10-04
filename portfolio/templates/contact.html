@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}CONTACT{% endblock title %}
+{% block body %}
+
+    <div class="container">
+        <h2 class="text-center my-3">Contact me </h2>
+        <form action="/contact" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="exampleFormControlInput1" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Your name">
+            </div><br>
+    
+            <div class="form-group">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div><br>
+    
+            <div class="form-group">
+                <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
+                <input type="phone" class="form-control" name="phone" id="phone number" placeholder="Phone number">
+            </div><br>
+    
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1" class="form-label">Explain your concern</label>
+                <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+            </div><br>
+    
+    <!--------        <div class="form-group">
+                <label for="">Example Select</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div><br>
+    
+            <div class="form-group">
+                <label for="">Example Multiple Select</label>
+                <select class="form-select" size="3" aria-label="size 3 select example">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>-->
+
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+   {% endblock body %} 
+   
